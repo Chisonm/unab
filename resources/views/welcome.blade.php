@@ -89,7 +89,7 @@ Welcome
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="{{asset('assets2/img/hero/parcelbox4.jpg')}}" alt="">
+                                    <img src="{{asset($append_ .'assets2/img/hero/parcelbox4.jpg')}}" alt="">
                                     <!-- Blog date -->
                                    
                                 </div>
