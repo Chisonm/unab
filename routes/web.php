@@ -22,8 +22,8 @@ Route::get('/about-us','FrontendController@Aboutus');
 Route::get('/services','FrontendController@services');
 
 Route::post('/contact-process','ContactController@store')->name('contact.store');
-Auth::routes(['register' => false]);
-
+Auth::routes();
+// ['register' => false]
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout','HomeController@logout');
 
