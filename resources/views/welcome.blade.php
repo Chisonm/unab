@@ -2,6 +2,9 @@
 @section('title')
 Welcome
 @endsection
+@php
+    $append_ = env('MY_ASSET_URL');
+@endphp
 @section('content')
     
 
