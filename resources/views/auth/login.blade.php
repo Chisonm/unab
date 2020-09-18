@@ -1,6 +1,9 @@
 @extends('admin.layout.master2')
 @include('partials.header')
 @include('partials.menu')
+@php
+    $append_ = env('MY_ASSET_URL');
+@endphp
 @section('content')
 <div class="page-content d-flex align-items-center justify-content-center">
 
