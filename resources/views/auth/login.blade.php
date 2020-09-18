@@ -1,6 +1,9 @@
 @extends('admin.layout.master2')
 @include('partials.header')
 @include('partials.menu')
+@php
+    $append_ = env('MY_ASSET_URL');
+@endphp
 @section('content')
 <div class="page-content d-flex align-items-center justify-content-center">
 
@@ -9,7 +12,7 @@
       <div class="card">
         <div class="row">
           <div class="col-md-4 pr-md-0">
-            <div class="auth-left-wrapper" style="background-image: url({{ url('assets2/img/hero/parcelbox.jpg') }})">
+            <div class="auth-left-wrapper" style="background-image: url({{ url($append_ .'assets2/img/hero/parcelbox.jpg') }})">
 
             </div>
           </div>
