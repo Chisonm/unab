@@ -4,7 +4,7 @@ About
 @endsection
 @section('content')
 <div class="slider-area mb-5">
-    <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="assets2/img/hero/parcelbox.jpg">
+    <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background=" {{asset($append_ .'assets2/img/hero/parcelbox.jpg')}}">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -37,7 +37,7 @@ About
         </div>
         <div class="col-xl-6 col-lg-6">
             <div class="support-location-img">
-                <img src="assets2/img/hero/parcelbox2.jpg" alt="">
+                <img src=" {{asset($append_ .'assets2/img/hero/parcelbox2.jpg')}}" alt="">
             </div>
         </div>
     </div>

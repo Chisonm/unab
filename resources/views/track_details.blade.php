@@ -4,7 +4,7 @@ Tracking
 @endsection
 @section('content')
             <div class="slider-area mb-5">
-                <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="assets2/img/hero/parcelbox.jpg">
+                <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background=" {{asset($append_ .'assets2/img/hero/parcelbox.jpg')}}">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-12">

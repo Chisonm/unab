@@ -9,7 +9,7 @@ Welcome
         <div class="slider-area ">
             <!-- Mobile Menu -->
             <div class="slider-active">
-            <div class="single-slider slider-height d-flex align-items-center" data-background="{{asset('assets2/img/hero/parcelbox.jpg')}}" style="background-color: rgb(78, 221, 73);">
+            <div class="single-slider slider-height d-flex align-items-center" data-background="{{asset($append_ .'assets2/img/hero/parcelbox.jpg')}}" style="background-color: rgb(78, 221, 73);">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-6 col-lg-9 col-md-10">
@@ -66,7 +66,7 @@ Welcome
                     </div>
                     <div class="col-xl-6 col-lg-6">
                         <div class="support-location-img">
-                            <img src="assets2/img/hero/parcelbox2.jpg" alt="">
+                            <img src="{{asset($append_ .'assets2/img/hero/parcelbox2.jpg')}}" alt="">
                         </div>
                     </div>
                 </div>
@@ -89,8 +89,9 @@ Welcome
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="assets2/img/hero/parcelbox4.jpg" alt="">
+                                    <img src="{{asset('assets2/img/hero/parcelbox4.jpg')}}" alt="">
                                     <!-- Blog date -->
+                                   
                                 </div>
                                 <div class="blog-cap">
                                     <p>| Cargo</p>
@@ -104,7 +105,7 @@ Welcome
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="assets2/img/hero/parcelbox6.jpg" alt="">
+                                    <img src=" {{asset($append_ .'assets2/img/hero/parcelbox6.jpg')}}" alt="">
                                 </div>
                                 <div class="blog-cap">
                                     <p>| Air-Freight</p>
@@ -118,7 +119,7 @@ Welcome
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="assets2/img/hero/parcelbox5.jpg" alt="">
+                                    <img src=" {{asset($append_ .'assets2/img/hero/parcelbox5.jpg')}}" alt="">
                                 </div>
                                 <div class="blog-cap">
                                     <p>| Road</p>
@@ -133,7 +134,7 @@ Welcome
         </div>
         <!-- Blog Area End -->
         <!-- Online CV Area Start -->
-         <div class="online-cv cv-bg section-overly pt-90 pb-120"  data-background="assets2/img/gallery/cv_bg.jpg">
+         <div class="online-cv cv-bg section-overly pt-90 pb-120"  data-background=" {{asset($append_ .'assets2/img/gallery/cv_bg.jpg')}}">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-10">

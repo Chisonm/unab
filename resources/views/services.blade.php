@@ -4,7 +4,7 @@ Services
 @endsection
 @section('content')
             <div class="slider-area mb-5">
-                <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="assets2/img/hero/parcelbox.jpg">
+                <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background=" {{asset($append_ .'assets2/img/hero/parcelbox.jpg')}}">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-12">
@@ -34,7 +34,7 @@ Services
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="assets2/img/hero/parcelbox4.jpg" alt="">
+                                    <img src=" {{asset($append_ .'assets2/img/hero/parcelbox4.jpg')}}" alt="">
                                     <!-- Blog date -->
                                 </div>
                                 <div class="blog-cap">
@@ -49,7 +49,7 @@ Services
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="assets2/img/hero/parcelbox6.jpg" alt="">
+                                    <img src=" {{asset($append_ .'assets2/img/hero/parcelbox6.jpg')}}" alt="">
                                 </div>
                                 <div class="blog-cap">
                                     <p>| Air-Freight</p>
@@ -63,7 +63,7 @@ Services
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="assets2/img/hero/parcelbox5.jpg" alt="">
+                                    <img src=" {{asset($append_ .'assets2/img/hero/parcelbox5.jpg')}}" alt="">
                                 </div>
                                 <div class="blog-cap">
                                     <p>| Road</p>
