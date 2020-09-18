@@ -15,20 +15,20 @@
   {{--  <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">  --}}
 
   <!-- plugin css -->
-<link rel="stylesheet" href="{{asset($append_'assets/fonts/feather-font/css/iconfont.css')}}">
-<link rel="stylesheet" href="{{asset($append_'assets/plugins/perfect-scrollbar/perfect-scrollbar.css')}}">
+<link rel="stylesheet" href="{{asset($append_ .'assets/fonts/feather-font/css/iconfont.css')}}">
+<link rel="stylesheet" href="{{asset($append_ .'assets/plugins/perfect-scrollbar/perfect-scrollbar.css')}}">
   <!-- end plugin css -->
 
   @stack('plugin-styles')
 
   <!-- common css -->
-  <link rel="stylesheet" href="{{asset('css/app.css')}}">
+  <link rel="stylesheet" href="{{asset($append_ .'css/app.css')}}">
   <!-- end common css -->
 
   @stack('style')
 </head>
 <body data-base-url="{{url('/')}}" class="loaded nimbus-is-editor settings-open sidebar-dark">
-<script src="{{asset($append_'assets/js/spinner.js')}}"></script>
+<script src="{{asset($append_ .'assets/js/spinner.js')}}"></script>
 
 
   <div class="main-wrapper" id="app">
@@ -43,9 +43,9 @@
   </div>
 
     <!-- base js -->
-    <script src="{{asset('js/app.js')}}"></script>
-    <script src="{{asset($append_'assets/plugins/feather-icons/feather.min.js')}}"></script>
-    <script src="{{asset($append_'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
+    <script src="{{asset($append_ .'js/app.js')}}"></script>
+    <script src="{{asset($append_ .'assets/plugins/feather-icons/feather.min.js')}}"></script>
+    <script src="{{asset($append_ .'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
     <!-- end base js -->
 
     <!-- plugin js -->
@@ -53,7 +53,7 @@
     <!-- end plugin js -->
 
     <!-- common js -->
-    <script src="{{asset($append_'assets/js/template.js')}}"></script>
+    <script src="{{asset($append_ .'assets/js/template.js')}}"></script>
     <!-- end common js -->
 
     @stack('custom-scripts')

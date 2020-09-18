@@ -1,7 +1,7 @@
 @extends('admin.layout.master')
 
 @push('plugin-styles')
-<link rel="stylesheet" href="{{asset('/assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css')}}">
+<link rel="stylesheet" href="{{asset($append_ .'assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css')}}">
 @endpush
 
 @section('content')
@@ -146,16 +146,16 @@
 @endsection
 
 @push('plugin-scripts')
-<script src="{{asset('/assets/plugins/chartjs/Chart.min.js')}}"></script>
-<script src="{{asset('/assets/plugins/jquery.flot/jquery.flot.js')}}"></script>
-<script src="{{asset('/assets/plugins/jquery.flot/jquery.flot.resize.js')}}"></script>
-<script src="{{asset('/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
-<script src="{{asset('/assets/plugins/apexcharts/apexcharts.min.js')}}"></script>
-<script src="{{asset('/assets/plugins/progressbar-js/progressbar.min.js')}}"></script>
+<script src="{{asset($append_ .'assets/plugins/chartjs/Chart.min.js')}}"></script>
+<script src="{{asset($append_ .'assets/plugins/jquery.flot/jquery.flot.js')}}"></script>
+<script src="{{asset($append_ .'assets/plugins/jquery.flot/jquery.flot.resize.js')}}"></script>
+<script src="{{asset($append_ .'assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
+<script src="{{asset($append_ .'assets/plugins/apexcharts/apexcharts.min.js')}}"></script>
+<script src="{{asset($append_ .'assets/plugins/progressbar-js/progressbar.min.js')}}"></script>
 
 @endpush
 
 @push('custom-scripts')
-<script src="{{asset('/assets/js/dashboard.js')}}"></script>
-<script src="{{asset('/assets/js/datepicker.js')}}"></script>
+<script src="{{asset($append_ .'assets/js/dashboard.js')}}"></script>
+<script src="{{asset($append_ .'assets/js/datepicker.js')}}"></script>
 @endpush

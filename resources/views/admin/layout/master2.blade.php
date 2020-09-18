@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NobleUI Laravel Admin Dashboard Template</title>
+  <title>UNAB</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +19,7 @@
   @stack('plugin-styles')
 
   <!-- common css -->
-  <link rel="stylesheet" href="{{asset('css/app.css')}}">
+  <link rel="stylesheet" href="{{asset($append_ .'css/app.css')}}">
   <!-- end common css -->
 
   @stack('style')
@@ -34,7 +34,7 @@
   </div>
 
     <!-- base js -->
-<script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset($append_ .'js/app.js')}}"></script>
 <script src="{{asset($append_ .'assets/plugins/feather-icons/feather.min.js')}}"></script>
     <!-- end base js -->
 
