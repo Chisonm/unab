@@ -9,7 +9,7 @@ Welcome
         <div class="slider-area ">
             <!-- Mobile Menu -->
             <div class="slider-active">
-            <div class="single-slider slider-height d-flex align-items-center" data-background="{{asset($append_ .'assets2/img/hero/parcelbox.jpg')}}" style="background-color: rgb(78, 221, 73);">
+            <div class="single-slider slider-height d-flex align-items-center" data-background="{{asset($append_.'assets2/img/hero/parcelbox.jpg')}}" style="background-color: rgb(78, 221, 73);">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-6 col-lg-9 col-md-10">
