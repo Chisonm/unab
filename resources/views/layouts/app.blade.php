@@ -1,4 +1,7 @@
 <!doctype html>
+@php
+    $append_ = env('ASSET_URL');
+@endphp
 <html class="no-js" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -12,18 +15,18 @@
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
         <!-- CSS here -->
-            <link rel="stylesheet" href="{{asset('assets2/css/bootstrap.min.css')}}">
-            <link rel="stylesheet" href="{{asset('assets2/css/owl.carousel.min.css')}}">
-            <link rel="stylesheet" href="{{asset('assets2/css/flaticon.css')}}">
-            <link rel="stylesheet" href="{{asset('assets2/css/price_rangs.css')}}">
-            <link rel="stylesheet" href="{{asset('assets2/css/slicknav.css')}}">
-            <link rel="stylesheet" href="{{asset('assets2/css/animate.min.css')}}">
-            <link rel="stylesheet" href="{{asset('assets2/css/magnific-popup.css')}}">
-            <link rel="stylesheet" href="{{asset('assets2/css/fontawesome-all.min.css')}}">
-            <link rel="stylesheet" href="{{asset('assets2/css/themify-icons.css')}}">
-            <link rel="stylesheet" href="{{asset('assets2/css/slick.css')}}">
-            <link rel="stylesheet" href="{{asset('assets2/css/nice-select.css')}}">
-            <link rel="stylesheet" href="{{asset('assets2/css/style.css')}}">
+            <link rel="stylesheet" href="{{asset($append_ .'assets2/css/bootstrap.min.css')}}">
+            <link rel="stylesheet" href="{{asset($append_ .'assets2/css/owl.carousel.min.css')}}">
+            <link rel="stylesheet" href="{{asset($append_ .'assets2/css/flaticon.css')}}">
+            <link rel="stylesheet" href="{{asset($append_ .'assets2/css/price_rangs.css')}}">
+            <link rel="stylesheet" href="{{asset($append_ .'assets2/css/slicknav.css')}}">
+            <link rel="stylesheet" href="{{asset($append_ .'assets2/css/animate.min.css')}}">
+            <link rel="stylesheet" href="{{asset($append_ .'assets2/css/magnific-popup.css')}}">
+            <link rel="stylesheet" href="{{asset($append_ .'assets2/css/fontawesome-all.min.css')}}">
+            <link rel="stylesheet" href="{{asset($append_ .'assets2/css/themify-icons.css')}}">
+            <link rel="stylesheet" href="{{asset($append_ .'assets2/css/slick.css')}}">
+            <link rel="stylesheet" href="{{asset($append_ .'assets2/css/nice-select.css')}}">
+            <link rel="stylesheet" href="{{asset($append_ .'assets2/css/style.css')}}">
             
    </head>
 <body>
