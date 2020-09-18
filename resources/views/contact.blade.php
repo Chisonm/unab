@@ -2,6 +2,9 @@
 @section('title')
 Contact
 @endsection
+@php
+    $append_ = env('MY_ASSET_URL');
+@endphp
 @section('content')
     <!-- Hero Area Start-->
     <div class="slider-area ">
