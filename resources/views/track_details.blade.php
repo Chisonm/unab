@@ -1,184 +1,78 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .top-left {
-                position: absolute;
-                left: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 54px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-        <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}" defer></script>
-        <script src="{{ asset('bootstrap/js/myscript.js') }}" defer></script>
-
-        <!-- Fonts -->
-        <link rel="dns-prefetch" href="//fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-        <!-- Styles -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ asset('asset/css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('asset/css/mycss.css') }}" rel="stylesheet">
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-        <a href="{{ url('/') }}" class="top-left links">Homepage</a>
-
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+@extends('layouts.app')
+@section('title')
+Tracking
+@endsection
+@section('content')
+            <div class="slider-area mb-5">
+                <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="assets2/img/hero/parcelbox.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="hero-cap text-center">
+                                    <h2>PARCEL INFORMATION</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            @endif
+                </div>
 
             <div class="container">
+            <h1>Tracking No:{{$parcel->track_no}}</h1>
                 <div class="row">
-                    <div class="col-md-6">
-                        <h3>Sender`s Information</h3>
-                        <div class="row mb-2">
-                            <div class="col-md-3">
-                                <b>Sender Name:</b>
-                            </div>
-                            <div class="col-md-9 mt-2 mt-md-0">
-                                {{$parcel->sender_name}}
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-md-3">
-                                <b>Pickup Location:</b>
-                            </div>
-                            <div class="col-md-9 mt-2 mt-md-0">
-                                {{$parcel->pickup_location}}
-                            </div>
-                        </div>
-
+                    <div class="col-xl-6 col-lg-6 col-md-6" >
+                        <div class="post-details3  mb-50" style="border: 1px solid green;">
+                            <!-- Small Section Tittle -->
+                           <div class="small-section-tittle">
+                               <h4 style="font-weight: 900;" class="text-center">Sender`s Information</h4>
+                           </div>
+                          <ul>
+                              <li>Sender Name :  <span class="text-wrap"> {{$parcel->sender_name}}</span></li>
+                              <li>Pickup Location : <span>{{$parcel->pickup_location}}
+                                <i class="fas fa-street-view" style="color: green;"></i></span></li>
+                              <li>Email : <span>{{$parcel->sender_email}}</span></li>
+                              <li>Parcel Name : <span>{{$parcel->parcel_name}}</span></li>
+                              <li>Phone :  <span>{{$parcel->sender_phone}}</span></li>
+                              <li>Application date : <span>{{$parcel->created_at}}</span></li>
+                          </ul>
+                       </div>
+                        {{--  <div class="post-details4  mb-50">
+                            <!-- Small Section Tittle -->
+                           <div class="small-section-tittle">
+                               <h4>Company Information</h4>
+                           </div>
+                              <span>Colorlib</span>
+                              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                            <ul>
+                                <li>Name: <span>Colorlib </span></li>
+                                <li>Web : <span> colorlib.com</span></li>
+                                <li>Email: <span>carrier.colorlib@gmail.com</span></li>
+                            </ul>
+                       </div>  --}}
                     </div>
-                    <div class="col-md-6">
-                        <h3>Receiver`s Information</h3>
-                        <div class="row mb-2">
-                            <div class="col-md-3">
-                                <b>Receiver`s Name:</b>
-                            </div>
-                            <div class="col-md-9 mt-2 mt-md-0">
-                                {{$parcel->sender_name}}
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-md-3">
-                                <b>Pickup Location:</b>
-                            </div>
-                            <div class="col-md-9 mt-2 mt-md-0">
-                                {{$parcel->sender_name}}
-                            </div>
-                        </div>
 
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="post-details3  mb-50" style="border: 1px solid green;">
+                            <!-- Small Section Tittle -->
+                           <div class="small-section-tittle">
+                               <h4 style="font-weight: 900;" class="text-center">Receiver`s Information</h4>
+                           </div>
+                          <ul>
+                              <li>Receiver`s Name : <span class="text-wrap">{{$parcel->receiver_name}}</span></li>
+                              <li>Current Location : <span>
+                                   @foreach($parcel->logs as $log)
+                                {{$log->curr_location}} <i class="fas fa-map-marker-alt" style="color: red;"></i>
+                                @endforeach</span>
+                            </li>
+                              <li>Delivery point : <span> {{$parcel->receiver_address}}<i class="fas fa-map-marker-alt" style="color: green;"></i></span></li>
+                        <li> Receiver`s Phone :  <span>{{$parcel->receiver_phone}}</span></li>
+                          </ul>
+                       </div>
                     </div>
-                </div>
-                <div class="row">
-                    <h3>Parcel Information</h3>
-                    <div class="row mb-2">
-                        <div class="col-md-3">
-                            <b>Pickup Location:</b>
-                        </div>
-                        <div class="col-md-9 mt-2 mt-md-0">
-                            {{$parcel->sender_name}}
-                        </div>
-                    </div>
- 
-                    <div class="">
-                        <div class="">
-                            {{$parcel->parcel_name}}
-                        </div>
 
-                        <div class="links">
-                           <p>Parcel Movement</p>
-                            <p>
-                                <b>Pickup point:  {{$parcel->pickup_location}} </b>
-                            </p>
-                            <p>
-                                @foreach($parcel->logs as $log)
-                                {{$log->curr_location}} >
-                                @endforeach
-                            </p>
-                            <p>
-                                <b>Delivery point:  {{$parcel->receiver_address}} </b>
-                            </p>
                             @if(Session::has('error'))
                             <p>{{ Session::get('error')}}</p>
                             @endif
-                        </div>
-                    </div>
                 </div>
-            </div>
-
-
         </div>
-    </body>
-</html>
+@endsection

@@ -293,7 +293,7 @@ hr {
 .head-btn2 {
 	background: none;
 	border: 1px solid $theme-color;
-	color: #fb246a;
+	color: #008000;
 	@media #{$lg}{
 		padding: 27px 34px;
 	}
@@ -380,8 +380,8 @@ hr {
 
 // Border btn -2
 .border-btn2{
-	border: 1px solid #8b92dd;
-	color: #8b92dd;
+	border: 1px solid #00BF6F;
+	color: #00BF6F;
 	font: $font_1;
 	background: none;
 	-moz-user-select: none;
@@ -411,7 +411,7 @@ hr {
 		top: 0;
 		width: 101%;
 		height: 101%;
-		background:#8b92dd;
+		background:#00BF6F;
 		z-index: -1;
 		transition: transform 0.5s;
 		transition-timing-function: ease;
@@ -666,7 +666,7 @@ hr {
 	}
 	.preloader .pere-text strong{
 		font-weight: 800;
-		color:#dca73a ;
+		color:#00BF6F;;
 		text-transform: uppercase;
 	}
 	@-webkit-keyframes zoom {
@@ -942,7 +942,7 @@ hr {
         }
     }
     span{
-        color: #fb246a;
+        color: #008000;
         text-transform: uppercase;
         margin-bottom: 28px;
         display: block;

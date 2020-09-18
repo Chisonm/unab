@@ -16,8 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/contact','FrontendController@index');
+Route::get('/track-parcel','FrontendController@Showtracking');
+Route::get('/about-us','FrontendController@Aboutus');
+Route::get('/services','FrontendController@services');
 
-Auth::routes();
+Route::post('/contact-process','ContactController@store')->name('contact.store');
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout','HomeController@logout');
