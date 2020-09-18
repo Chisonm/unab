@@ -1,6 +1,6 @@
 <!doctype html>
 @php
-    $append_ = env('ASSET_URL');
+    $append_ = env('MY_ASSET_URL');
 @endphp
 <html class="no-js" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
