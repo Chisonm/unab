@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+@php
+    $append_ = env('MY_ASSET_URL');
+@endphp
 <html>
 <head>
   <title>UNAB</title>

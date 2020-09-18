@@ -1,5 +1,7 @@
 @extends('admin.layout.master')
-
+@php
+    $append_ = env('MY_ASSET_URL');
+@endphp
 @push('plugin-styles')
 <link rel="stylesheet" href="{{asset($append_ .'assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css')}}">
 @endpush
