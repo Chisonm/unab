@@ -31,8 +31,6 @@ Tracking
                            </div>
                           <ul>
                               <li>Sender Name :  <span class="text-wrap"> {{$parcel->sender_name}}</span></li>
-                              <li>Pickup Location : <span>{{$parcel->pickup_location}}
-                                <i class="fas fa-street-view" style="color: green;"></i></span></li>
                               <li>Email : <span>{{$parcel->sender_email}}</span></li>
                               <li>Parcel Name : <span>{{$parcel->parcel_name}}</span></li>
                               <li>Phone :  <span>{{$parcel->sender_phone}}</span></li>
@@ -73,7 +71,8 @@ Tracking
                                         <li>Origin: <span>{{$parcel->origin}} </span></li>
                                         <li>Package : <span> {{$parcel->package}}</span></li>
                                         <li>Status: <span>{{$parcel->status}}</span></li>
-                                        <li>Destination: <span>{{$parcel->pickup_location}} </span></li>
+                                        <li>Destination: <span>{{$parcel->pickup_location}}
+                                            <i class="fas fa-street-view" style="color: green;"></i></span></li>
                                         <li>Carrier : <span> {{$parcel->carrier}}</span></li>
                                         <li>Type Of Shipment: <span>{{$parcel->shipment}}</span></li>
                                         <li>Pick-Up Time: <span>{{ date('h:i:A', strtotime($parcel->pickup_time)) }}</span></li>

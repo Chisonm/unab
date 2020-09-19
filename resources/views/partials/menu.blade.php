@@ -1,3 +1,6 @@
+@php
+    $append_ = env('MY_ASSET_URL');
+@endphp
 <header>
     <!-- Header Start -->
    <div class="header-area header-transparrent">

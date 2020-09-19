@@ -39,25 +39,25 @@ class ParcelController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'sender_name' => 'required',
-            'sender_email' => 'required',
-            'sender_phone' => 'required',
-            'parcel_name' => 'required',
-            'pickup_location' => 'required',
-            'receiver_name' => 'required',
-            'receiver_phone' => 'required',
-            'receiver_address' => 'required',
-            'receiver_email' => 'required',
-            'origin' => 'required',
-            'package' => 'required',
-            'carrier' => 'required',
-            'shipment' => 'required',
-            'weight' => 'required',
-            'product' => 'required',
-            'quantity' => 'required',
-            'pickup_date' => 'required',
-            'pickup_time' => 'required',
-            'fee' => 'required',
+            'sender_name' => 'nullable',
+            'sender_email' => 'nullable',
+            'sender_phone' => 'nullable',
+            'parcel_name' => 'nullable',
+            'pickup_location' => 'nullable',
+            'receiver_name' => 'nullable',
+            'receiver_phone' => 'nullable',
+            'receiver_address' => 'nullable',
+            'receiver_email' => 'nullable',
+            'origin' => 'nullable',
+            'package' => 'nullable',
+            'carrier' => 'nullable',
+            'shipment' => 'nullable',
+            'weight' => 'nullable',
+            'product' => 'nullable',
+            'quantity' => 'nullable',
+            'pickup_date' => 'nullable',
+            'pickup_time' => 'nullable',
+            'fee' => 'nullable',
         ]);
         $data['admin_id'] = Auth::user()->id;
         $data['status'] = 'Processing';
@@ -87,7 +87,8 @@ class ParcelController extends Controller
      */
     public function edit($id)
     {
-        //
+        $parcel = Parcel::findOrFail($id);
+        return view('parcel_view',compact('parcel'));
     }
 
     /**
@@ -99,7 +100,34 @@ class ParcelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $parcel = Parcel::findOrFail($id);
+
+        $data = $request->validate([
+            'sender_name' => 'nullable',
+            'sender_email' => 'nullable',
+            'sender_phone' => 'nullable',
+            'parcel_name' => 'nullable',
+            'pickup_location' => 'required',
+            'receiver_name' => 'nullable',
+            'receiver_phone' => 'nullable',
+            'receiver_address' => 'nullable',
+            'receiver_email' => 'nullable',
+            'origin' => 'nullable',
+            'package' => 'nullable',
+            'carrier' => 'nullable',
+            'shipment' => 'nullable',
+            'weight' => 'nullable',
+            'product' => 'nullable',
+            'quantity' => 'nullable',
+            'pickup_date' => 'nullable',
+            'pickup_time' => 'nullable',
+            'fee' => 'nullable',
+            'status' => 'nullable',
+        ]);
+        
+        $data['admin_id'] = Auth::user()->id;
+        $parcel->update($data);
+        return redirect()->back()->withStatus('Parcel updated!');
     }
 
     /**
