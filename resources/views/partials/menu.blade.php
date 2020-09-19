@@ -7,7 +7,7 @@
                     <div class="col-lg-3 col-md-2">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="/"><h2 style="font-weight: 900;">UNAB</h2></a>
+                            <a href="/"><img src="assets2/img/logo/logo.jpg" alt="logo"  class="img-responsive" width="100" style="margin-right: 0;"><h2 style="font-weight: 900;font-size:20px;margin:0;display:inline;">UNAB</h2></a>
                         </div>  
                     </div>
                     <div class="col-lg-9 col-md-9">
