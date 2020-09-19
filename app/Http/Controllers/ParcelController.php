@@ -47,6 +47,16 @@ class ParcelController extends Controller
             'receiver_name' => 'required',
             'receiver_phone' => 'required',
             'receiver_address' => 'required',
+            'receiver_email' => 'required',
+            'origin' => 'required',
+            'package' => 'required',
+            'carrier' => 'required',
+            'shipment' => 'required',
+            'weight' => 'required',
+            'product' => 'required',
+            'quantity' => 'required',
+            'pickup_date' => 'required',
+            'pickup_time' => 'required',
             'fee' => 'required',
         ]);
         $data['admin_id'] = Auth::user()->id;
@@ -100,6 +110,10 @@ class ParcelController extends Controller
      */
     public function destroy($id)
     {
+        $delete = Parcel::findOrFail($id);
+        $delete->delete();
+        
+        return redirect()->back()->withStatus('Parcel deleted!');
         //
     }
 

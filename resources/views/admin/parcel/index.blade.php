@@ -133,6 +133,10 @@
                           <input type="text" name="receiver_name" class="form-control" required value="{{old('receiver_name')}}">
                       </div>
                       <div class="form-group mb-2">
+                          <label for="">Receiver email</label>
+                          <input type="text" name="receiver_email" class="form-control" required value="{{old('receiver_email')}}">
+                      </div>
+                      <div class="form-group mb-2">
                           <label for="">Receiver Phone Number</label>
                           <input type="text" name="receiver_phone" class="form-control" required value="{{old('receiver_phone')}}">
                       </div>
@@ -141,11 +145,47 @@
                           <textarea type="text" rows="3" name="receiver_address" class="form-control" required>{!! old('receiver_address') !!}</textarea>
                       </div>
                       <div class="form-group mb-2">
+                          <label for="">Origin</label>
+                          <input type="text" name="origin" class="form-control" required value="{{old('origin')}}">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="">Package</label>
+                          <input type="text" name="package" class="form-control" required value="{{old('package')}}">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="">Carrier</label>
+                          <input type="text" name="carrier" class="form-control" required value="{{old('carrier')}}">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="">Shipment</label>
+                          <input type="text" name="shipment" class="form-control" required value="{{old('shipment')}}">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="">Weight</label>
+                          <input type="number" name="weight" class="form-control" required value="{{old('weight')}}">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="">Product</label>
+                          <input type="text" name="product" class="form-control" required value="{{old('product')}}">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="">Quantity</label>
+                          <input type="number" name="quantity" class="form-control" required value="{{old('quantity')}}">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="">PickUp Date</label>
+                          <input type="date" name="pickup_date" class="form-control" required value="{{old('pickup_date')}}">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="">PickUp Time</label>
+                          <input type="time" name="pickup_time" class="form-control" required value="{{old('pickup_time')}}">
+                      </div>
+                      <div class="form-group mb-2">
                           <label for="">Delivery Fee (NGN)</label>
                           <input type="number" name="fee" class="form-control" required value="{{old('fee')}}">
                       </div>
                       <div class="control-group">
-                          <button type="submit" class="btn btn-blue">Proceed</button>
+                          <button type="submit" class="btn btn-primary">Proceed</button>
                       </div>
                   </div>
               </div>

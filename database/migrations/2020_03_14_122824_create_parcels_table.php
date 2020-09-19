@@ -25,6 +25,16 @@ class CreateParcelsTable extends Migration
             $table->string('receiver_name');
             $table->string('receiver_phone');
             $table->string('receiver_address');
+            $table->string('receiver_email');
+            $table->string('origin');
+            $table->string('package');
+            $table->string('carrier');
+            $table->string('shipment');
+            $table->string('weight');
+            $table->string('product');
+            $table->string('quantity');
+            $table->string('pickup_date');
+            $table->string('pickup_time');
             $table->string('fee');
             $table->string('status');
             $table->timestamps();

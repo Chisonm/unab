@@ -7,7 +7,7 @@
                     <div class="col-lg-3 col-md-2">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="/"><span class="flaticon-cms"></span><h2 style="font-weight: 700;">Unab</h2></a>
+                            <a href="/"><h2 style="font-weight: 900;">UNAB</h2></a>
                         </div>  
                     </div>
                     <div class="col-lg-9 col-md-9">

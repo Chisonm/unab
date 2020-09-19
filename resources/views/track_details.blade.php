@@ -20,8 +20,8 @@ Tracking
                 </div>
                 </div>
 
-            <div class="container">
-            <h1>Tracking No:{{$parcel->track_no}}</h1>
+            <div class="container mb-5">
+                <h1 class="mb-3">Tracking No: <b style="font-weight: 900">{{$parcel->track_no}}</b></h1>
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 col-md-6" >
                         <div class="post-details3  mb-50" style="border: 1px solid green;">
@@ -39,19 +39,7 @@ Tracking
                               <li>Application date : <span>{{$parcel->created_at}}</span></li>
                           </ul>
                        </div>
-                        {{--  <div class="post-details4  mb-50">
-                            <!-- Small Section Tittle -->
-                           <div class="small-section-tittle">
-                               <h4>Company Information</h4>
-                           </div>
-                              <span>Colorlib</span>
-                              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                            <ul>
-                                <li>Name: <span>Colorlib </span></li>
-                                <li>Web : <span> colorlib.com</span></li>
-                                <li>Email: <span>carrier.colorlib@gmail.com</span></li>
-                            </ul>
-                       </div>  --}}
+                
                     </div>
 
                     <div class="col-xl-6 col-lg-6 col-md-6">
@@ -71,11 +59,63 @@ Tracking
                         <li> Receiver`s Phone :  <span>{{$parcel->receiver_phone}}</span></li>
                           </ul>
                        </div>
+                       <div class="post-details4  mb-50">
+                            <!-- Small Section Tittle -->
+                           <div class="small-section-tittle">
+                               <h4 style="font-weight: 900;font-size:42px;">Shipment Information</h4>
+                           </div>
+                        <span >Shipment Status : <small style="color: chartreuse;font-weight:bolder;font-size:20px;">{{$parcel->status}}</small>...</span>
+                        <h5>NOTE:</h5>
+                              <p>CUSTOMERS ARE ADVICE TO FOLLOW INSTRUSTIONS.</p>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                    <ul>
+                                        <li>Origin: <span>{{$parcel->origin}} </span></li>
+                                        <li>Package : <span> {{$parcel->package}}</span></li>
+                                        <li>Status: <span>{{$parcel->status}}</span></li>
+                                        <li>Destination: <span>{{$parcel->pickup_location}} </span></li>
+                                        <li>Carrier : <span> {{$parcel->carrier}}</span></li>
+                                        <li>Type Of Shipment: <span>{{$parcel->shipment}}</span></li>
+                                        <li>Pick-Up Time: <span>{{ date('h:i:A', strtotime($parcel->pickup_time)) }}</span></li>
+                                    </ul> 
+                                  </div>
+                                  <div class="col-md-6">
+                                    <ul>
+                                        <li>Carrier Ref No : <span>{{$parcel->track_no}} </span></li>
+                                        <li>Product : <span> {{$parcel->product}}</span></li>
+                                        <li>Quantity: <span>{{$parcel->quantity}}</span></li>
+                                        <li>Delivery Date: <span>{{$parcel->pickup_date}} </span></li>
+                                        <li>Departure-time: <span class="text-wrap">{{ date('F j, Y g:i a',strtotime($parcel->created_at)) }}</span></li>
+                                        <li>Pick-Up Date: <span>{{$parcel->pickup_date}}</span></li>
+                                    </ul> 
+                                  </div>
+                              </div>
+                            
+                       </div>
                     </div>
-
+               
+    
                             @if(Session::has('error'))
                             <p>{{ Session::get('error')}}</p>
                             @endif
                 </div>
+                    <div class="row justify-content-center">
+                    <div class="col-xl-10 col-lg-10 col-md-12 " >
+                        <div class="post-details3  mb-50 bg-white">
+                            <!-- Small Section Tittle -->
+                        <div class="small-section-tittle">
+                            <h4 style="font-weight: 900;" class="text-center">Shipment History</h4>
+                        </div>
+                        <ul>
+                            <li>Date :  <span class="text-wrap"> {{$parcel->created_at}}</span></li>
+                            <li>Time: <span>{{$parcel->updated_at}}</span></li>
+                            <li>Location : <span>{{$parcel->pickup_location}}</span></li>
+                            <li>Status : <span>{{$parcel->status}}</span></li>
+                            <li>Remartks :  <span>{{$parcel->carrier}} Company</span></li>
+                        </ul>
+                    </div>
+        
+            </div>
         </div>
+    </div>
 @endsection
