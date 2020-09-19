@@ -92,7 +92,7 @@
                         </div> 
                         
                         <div class="control-group">
-                            <button type="submit" class="btn btn-blue">Proceed</button>
+                            <button type="submit" class="btn btn-primary">Proceed</button>
                         </div>
                     </div> 
                 </div> 
