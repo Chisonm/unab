@@ -39,7 +39,7 @@ Welcome
                                     </div>	
                                 </form>	
                                 @if(Session::has('error'))
-                                <p>{{ Session::get('error')}}</p>
+                                <p class="alert alert-danger">{{ Session::get('error')}}</p>
                                 @endif
                                 </div>
                             </div>
