@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 Route::get('/command', function() {
     $output = [];
-    \Artisan::call('migrate', $output);
+    \Artisan::call('migrate:fresh', $output);
     dd($output);
 });
 Route::get('/contact','FrontendController@index');
