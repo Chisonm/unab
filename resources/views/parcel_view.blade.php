@@ -2,13 +2,23 @@
 
 @section('content')
 <div class="container">
-   <div class="card">
-    <div class="card-header">
-        <div class="card-title">
-             <h4>Update Parcel</h4>
-        </div>
-    </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    <h4>Update Parcel</h4>
+                </div>
+            </div>
             <div class="card-body">
+                @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+              @endif
+              @if(Session::has('error'))
+              <div class="alert alert-danger">
+                  {{ Session::get('error') }}
+              </div>
+            @endif
                 <form action="{{ route('parcel.update',$parcel->id) }}" method="post">
                     @csrf
                     @method('PUT')
@@ -24,7 +34,7 @@
                       </div>
                       <div class="form-group mb-2">
                           <label for="">Sender Phone Number</label>
-                          <input type="number" name="sender_phone" class="form-control" value="{{$parcel->sender_phone}}">
+                          <input type="text" name="sender_phone" class="form-control" value="{{$parcel->sender_phone}}">
                       </div>
                       <div class="form-group mb-2">
                           <label for="">Parcel Name</label>
@@ -35,15 +45,26 @@
                           <input type="text" name="pickup_location" class="form-control" value="{{$parcel->pickup_location}}">
                       </div>
                       <div class="form-group mb-2">
-                          <label for="">Pickup State</label>
-                          <input type="text" name="pickup_location" class="form-control" value="">
-                      </div>
-                      <div class="form-group mb-2">
-                          <label for="">Pickup Location</label>
-                          <input type="text" name="pickup_location" class="form-control" value="">
-                      </div>
+                        <label for="">Origin</label>
+                        <input type="text" name="origin" class="form-control" value="{{$parcel->origin}}">
                     </div>
-
+                    <div class="form-group mb-2">
+                        <label for="">Package</label>
+                        <input type="text" name="package" class="form-control" value="{{$parcel->package}}">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Carrier</label>
+                        <input type="text" name="carrier" class="form-control" value="{{$parcel->carrier}}">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Shipment</label>
+                        <input type="text" name="shipment" class="form-control" value="{{$parcel->shipment}}">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="">Weight</label>
+                        <input type="number" name="weight" class="form-control" value="{{$parcel->weight}}">
+                    </div>
+                    </div>
                   <div class="col-md-6">
                       <div class="form-group mb-2">
                           <label for="">Receiver Name</label>
@@ -51,7 +72,7 @@
                       </div>
                       <div class="form-group mb-2">
                           <label for="">Receiver email</label>
-                          <input type="text" name="receiver_email" class="form-control" value="{{$parcel->receiver_email}}">
+                          <input type="email" name="receiver_email" class="form-control" value="{{$parcel->receiver_email}}">
                       </div>
                       <div class="form-group mb-2">
                           <label for="">Receiver Phone Number</label>
@@ -61,26 +82,7 @@
                           <label for="">Receiver Address</label>
                           <textarea type="text" rows="3" name="receiver_address" class="form-control">{!! $parcel->receiver_address !!}</textarea>
                       </div>
-                      <div class="form-group mb-2">
-                          <label for="">Origin</label>
-                          <input type="text" name="origin" class="form-control" value="{{$parcel->origin}}">
-                      </div>
-                      <div class="form-group mb-2">
-                          <label for="">Package</label>
-                          <input type="text" name="package" class="form-control" value="{{$parcel->package}}">
-                      </div>
-                      <div class="form-group mb-2">
-                          <label for="">Carrier</label>
-                          <input type="text" name="carrier" class="form-control" value="{{$parcel->carrier}}">
-                      </div>
-                      <div class="form-group mb-2">
-                          <label for="">Shipment</label>
-                          <input type="text" name="shipment" class="form-control" value="{{$parcel->shipment}}">
-                      </div>
-                      <div class="form-group mb-2">
-                          <label for="">Weight</label>
-                          <input type="number" name="weight" class="form-control" value="{{$parcel->weight}}">
-                      </div>
+                      
                       <div class="form-group mb-2">
                           <label for="">Product</label>
                           <input type="text" name="product" class="form-control" value="{{$parcel->product}}">
@@ -102,19 +104,16 @@
                           <input type="number" name="fee" class="form-control" value="{{$parcel->fee}}">
                       </div>
                       <div class="form-group mb-2">
-                        <label for="">Delivery Fee</label>
+                        <label for="">Status</label>
                         <input type="text" name="status" class="form-control" value="{{$parcel->status}}">
                     </div>
                       <div class="control-group">
-                          <button type="submit" class="btn btn-primary">Proceed</button>
+                          <button type="submit" class="btn btn-primary">Update</button>
                       </div>
                   </div>
               </div>
-            </div>
             </form>
         </div>
     </div>
-</div> 
 </div>
-
 @endsection

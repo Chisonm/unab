@@ -100,9 +100,8 @@ class ParcelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $parcel = Parcel::findOrFail($id);
-
-        $data = $request->validate([
+            // dd($request->all());
+       $data =  $request->validate([
             'sender_name' => 'nullable',
             'sender_email' => 'nullable',
             'sender_phone' => 'nullable',
@@ -123,11 +122,17 @@ class ParcelController extends Controller
             'pickup_time' => 'nullable',
             'fee' => 'nullable',
             'status' => 'nullable',
+            
         ]);
         
+        $parcel = Parcel::find($id);
+
         $data['admin_id'] = Auth::user()->id;
-        $parcel->update($data);
-        return redirect()->back()->withStatus('Parcel updated!');
+        
+        $parcel->save($data);
+        Session::flash('success', 'Parcel updated.');
+        return redirect()->back();
+
     }
 
     /**

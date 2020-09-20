@@ -94,7 +94,8 @@
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button></h5>
             </div>
             <div class="modal-body">
-                <form action="{{ route('parcel.store') }}" method="post">@csrf
+                <form action="{{ route('parcel.store') }}" method="post">
+                    @csrf
                 <div class="row">
                     <div class="col-md-6">
                       <div class="form-group mb-2 ">
@@ -107,7 +108,7 @@
                       </div>
                       <div class="form-group mb-2">
                           <label for="">Sender Phone Number</label>
-                          <input type="number" name="sender_phone" class="form-control" value="{{old('sender_phone')}}">
+                          <input type="text" name="sender_phone" class="form-control" value="{{old('sender_phone')}}">
                       </div>
                       <div class="form-group mb-2">
                           <label for="">Parcel Name</label>
@@ -116,37 +117,6 @@
                       <div class="form-group mb-2">
                           <label for="">Pickup Country</label>
                           <input type="text" name="pickup_location" class="form-control" value="{{old('pickup_location')}}">
-                      </div>
-                      <div class="form-group mb-2">
-                          <label for="">Pickup State</label>
-                          <input type="text" name="pickup_location" class="form-control" value="{{old('pickup_location')}}">
-                      </div>
-                      <div class="form-group mb-2">
-                          <label for="">Pickup Location</label>
-                          <input type="text" name="pickup_location" class="form-control" value="{{old('pickup_location')}}">
-                      </div>
-                    </div>
-
-                  <div class="col-md-6">
-                      <div class="form-group mb-2">
-                          <label for="">Receiver Name</label>
-                          <input type="text" name="receiver_name" class="form-control" value="{{old('receiver_name')}}">
-                      </div>
-                      <div class="form-group mb-2">
-                          <label for="">Receiver email</label>
-                          <input type="text" name="receiver_email" class="form-control" value="{{old('receiver_email')}}">
-                      </div>
-                      <div class="form-group mb-2">
-                          <label for="">Receiver Phone Number</label>
-                          <input type="text" name="receiver_phone" class="form-control" value="{{old('receiver_phone')}}">
-                      </div>
-                      <div class="form-group mb-2">
-                          <label for="">Receiver Address</label>
-                          <textarea type="text" rows="3" name="receiver_address" class="form-control">{!! old('receiver_address') !!}</textarea>
-                      </div>
-                      <div class="form-group mb-2">
-                          <label for="">Origin</label>
-                          <input type="text" name="origin" class="form-control" value="{{old('origin')}}">
                       </div>
                       <div class="form-group mb-2">
                           <label for="">Package</label>
@@ -163,6 +133,29 @@
                       <div class="form-group mb-2">
                           <label for="">Weight</label>
                           <input type="number" name="weight" class="form-control" value="{{old('weight')}}">
+                      </div>
+                    </div>
+
+                  <div class="col-md-6">
+                      <div class="form-group mb-2">
+                          <label for="">Receiver Name</label>
+                          <input type="text" name="receiver_name" class="form-control" value="{{old('receiver_name')}}">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="">Receiver email</label>
+                          <input type="email" name="receiver_email" class="form-control" value="{{old('receiver_email')}}">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="">Receiver Phone Number</label>
+                          <input type="text" name="receiver_phone" class="form-control" value="{{old('receiver_phone')}}">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="">Receiver Address</label>
+                          <textarea type="text" rows="3" name="receiver_address" class="form-control">{!! old('receiver_address') !!}</textarea>
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="">Origin</label>
+                          <input type="text" name="origin" class="form-control" value="{{old('origin')}}">
                       </div>
                       <div class="form-group mb-2">
                           <label for="">Product</label>

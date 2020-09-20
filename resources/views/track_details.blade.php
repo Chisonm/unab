@@ -83,8 +83,9 @@ Tracking
                                         <li>Carrier Ref No : <span>{{$parcel->track_no}} </span></li>
                                         <li>Product : <span> {{$parcel->product}}</span></li>
                                         <li>Quantity: <span>{{$parcel->quantity}}</span></li>
+                                        <li>Weight: <span>{{$parcel->weight}}KG</span></li>
                                         <li>Delivery Date: <span>{{$parcel->pickup_date}} </span></li>
-                                        <li>Departure-time: <span class="text-wrap">{{ date('F j, Y g:i a',strtotime($parcel->created_at)) }}</span></li>
+                                        <li>Departure-time: <span class="text-wrap">{{$parcel->created_at->format('Y-M-d') }}</span></li>
                                         <li>Pick-Up Date: <span>{{$parcel->pickup_date}}</span></li>
                                     </ul> 
                                   </div>
@@ -110,7 +111,7 @@ Tracking
                             <li>Time: <span>{{$parcel->updated_at}}</span></li>
                             <li>Location : <span>{{$parcel->pickup_location}}</span></li>
                             <li>Status : <span>{{$parcel->status}}</span></li>
-                            <li>Remartks :  <span>{{$parcel->carrier}} Company</span></li>
+                            <li>Remarks :  <span>{{$parcel->carrier}} Company</span></li>
                         </ul>
                     </div>
         
