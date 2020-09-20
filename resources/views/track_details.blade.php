@@ -34,7 +34,7 @@ Tracking
                               <li>Email : <span>{{$parcel->sender_email}}</span></li>
                               <li>Parcel Name : <span>{{$parcel->parcel_name}}</span></li>
                               <li>Phone :  <span>{{$parcel->sender_phone}}</span></li>
-                              <li>Application date : <span>{{$parcel->created_at}}</span></li>
+                              <li>Application date : <span>{{$parcel->created_at->format('Y-M-d')}}</span></li>
                           </ul>
                        </div>
                 
