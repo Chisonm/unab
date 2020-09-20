@@ -53,7 +53,7 @@ Tracking
                                 {{$log->curr_location}} <i class="fas fa-map-marker-alt" style="color: red;"></i>
                                 @endforeach</span>
                             </li>
-                              <li> <h5 class="mr-3">Delivery point</h5> : <span> {{$parcel->receiver_address}}<i class="fas fa-map-marker-alt ml-1" style="color: green;"></i></span></li>
+                              <li> <h5 class="mr-3">Delivery point :</h5>  <span> {{$parcel->receiver_address}}<i class="fas fa-map-marker-alt ml-1" style="color: green;"></i></span></li>
                         <li> Receiver`s Phone :  <span>{{$parcel->receiver_phone}}</span></li>
                           </ul>
                        </div>
