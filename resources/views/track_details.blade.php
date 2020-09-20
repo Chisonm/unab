@@ -30,7 +30,7 @@ Tracking
                                <h4 style="font-weight: 900;" class="text-center">Sender`s Information</h4>
                            </div>
                           <ul>
-                              <li>Sender Name :  <span class="text-wrap"> {{$parcel->sender_name}}</span></li>
+                              <li>Name :  <span class="text-wrap"> {{$parcel->sender_name}}</span></li>
                               <li>Email : <span>{{$parcel->sender_email}}</span></li>
                               <li>Parcel Name : <span>{{$parcel->parcel_name}}</span></li>
                               <li>Phone :  <span>{{$parcel->sender_phone}}</span></li>
