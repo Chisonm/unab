@@ -1,5 +1,5 @@
 @extends('admin.layout.master')
-
+{{--  @dd(session()->all())  --}}
 @section('content')
 <div class="container">
         <div class="card">

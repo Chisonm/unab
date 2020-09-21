@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email', 50)->unique();
             // $table->string('role');
             $table->timestamp('email_verified_at')->nullable();
-            $table->enum('role',['Admin','Customer'])->default('Admin');
+            $table->enum('role',['Admin','Customer'])->default('Customer');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

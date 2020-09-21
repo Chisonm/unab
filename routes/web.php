@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/command', function() {
-    $output = [];
-    \Artisan::call('migrate:fresh', $output);
-    dd($output);
-});
+// Route::get('/command', function() {
+//     $output = [];
+//     \Artisan::call('migrate:fresh', $output);
+//     dd($output);
+// });
 Route::get('/contact','FrontendController@index');
 Route::get('/track-parcel','FrontendController@Showtracking');
 Route::get('/about-us','FrontendController@Aboutus');

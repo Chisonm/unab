@@ -100,13 +100,14 @@ class ParcelController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // dd($id);
             // dd($request->all());
        $data =  $request->validate([
             'sender_name' => 'nullable',
             'sender_email' => 'nullable',
             'sender_phone' => 'nullable',
             'parcel_name' => 'nullable',
-            'pickup_location' => 'required',
+            'pickup_location' => 'nullable',
             'receiver_name' => 'nullable',
             'receiver_phone' => 'nullable',
             'receiver_address' => 'nullable',
@@ -129,8 +130,8 @@ class ParcelController extends Controller
 
         $data['admin_id'] = Auth::user()->id;
         
-        $parcel->save($data);
-        Session::flash('success', 'Parcel updated.');
+        $parcel->update($data);
+        session()->flash('success', 'Parcel updated.');
         return redirect()->back();
 
     }
