@@ -39,7 +39,7 @@
                                 <li><a href="#" class="mr-2">Facebook<i class="fab fa-facebook-f ml-1"></i></a></li>
                                 <li><a href="#" class="mr-2">Twitter<i class="fab fa-twitter ml-1"></i></a></li>
                                 <li><a href="#" class="mr-2">Instagram<i class="fab fa-instagram ml-1"></i></a></li>
-                                
+
                             </ul>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                     </div>
                 </div>
             </div>
-          
+
         </div>
     </div>
 
@@ -91,7 +91,7 @@
 </footer>
 
 <!-- JS here -->
-
+<a href="http://free-website-translation.com/" id="ftwtranslation_button" hreflang="en" title="" style="border:0;"><img src="http://free-website-translation.com/img/fwt_button_en.gif" id="ftwtranslation_image" alt="FWT Homepage Translator" style="border:0;"/></a> <script type="text/javascript" src="http://free-website-translation.com/scripts/fwt.js" /></script>
     <!-- All JS Custom Plugins Link Here here -->
     <script src="{{asset($append_ .'assets2/js/vendor/modernizr-3.5.0.min.js')}}"></script>
     <!-- Jquery, Popper, Bootstrap -->
@@ -105,7 +105,7 @@
     <script src="{{asset($append_ .'assets2/js/owl.carousel.min.js')}}"></script>
     <script src="{{asset($append_ .'assets2/js/slick.min.js')}}"></script>
     <script src="{{asset($append_ .'assets2/js/price_rangs.js')}}"></script>
-    
+
     <!-- One Page, Animated-HeadLin -->
     <script src="{{asset($append_ .'assets2/js/wow.min.js')}}"></script>
     <script src="{{asset($append_ .'assets2/js/animated.headline.js')}}"></script>
@@ -115,14 +115,14 @@
     <script src="{{asset($append_ .'assets2/js/jquery.scrollUp.min.js')}}"></script>
     <script src="{{asset($append_ .'assets2/js/jquery.nice-select.min.js')}}"></script>
     <script src="{{asset($append_ .'assets2/js/jquery.sticky.js')}}"></script>
-    
+
     <!-- contact js -->
     <script src="{{asset($append_ .'assets2/js/contact.js')}}"></script>
     <script src="{{asset($append_ .'assets2/js/jquery.form.js')}}"></script>
     <script src="{{asset($append_ .'assets2/js/jquery.validate.min.js')}}"></script>
     <script src="{{asset($append_ .'assets2/js/mail-script.js')}}"></script>
     <script src="{{asset($append_ .'assets2/js/jquery.ajaxchimp.min.js')}}"></script>
-    
-    <!-- Jquery Plugins, main Jquery -->	
+
+    <!-- Jquery Plugins, main Jquery -->
     <script src="{{asset($append_ .'assets2/js/plugins.js')}}"></script>
     <script src="{{asset($append_ .'assets2/js/main.js')}}"></script>
