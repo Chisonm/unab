@@ -91,7 +91,6 @@
 </footer>
 
 <!-- JS here -->
-<a href="http://free-website-translation.com/" id="ftwtranslation_button" hreflang="de" title="" style="border:0;"><img src="http://free-website-translation.com/img/fwt_button_en.gif" id="ftwtranslation_image" alt="website translator plugin" style="border:0;"/></a> <script type="text/javascript" src="http://free-website-translation.com/scripts/fwt.js"></script>
     <!-- All JS Custom Plugins Link Here here -->
     <script src="{{asset($append_ .'assets2/js/vendor/modernizr-3.5.0.min.js')}}"></script>
     <!-- Jquery, Popper, Bootstrap -->
